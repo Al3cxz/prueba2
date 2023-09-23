@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Días y Horas</title>
+    <link rel="stylesheet" href="/css/dias.css">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/buttonDias.css">
+    <link rel="stylesheet" href="/css/selectStyle.css">
+    <link rel="stylesheet" href="/css/TablaDisponi.css">
+
+</head>
+
+<body>
+    <h1>BIENVENIDOS A "TODOS A LA MISMA HORA"</h1>
+    <div id="contenido">
+    <h3>Ingresa tu nombre:</h3>
+
+    <input type="text" id="nombre" placeholder="Nombre del usuario">
+    <br><br>
+    <div class="button-container">
+        <button class="animated-button" id="agregarUsuario">
+            <span>Agregar Usuario</span>
+            <span></span>
+        </button>
+        <br> <br>
+        <button class="animated-button" id="guardar">
+            <span>Borrar</span>
+            <span></span>
+        </button>
+    </div>
+    <h3>Selecciona los días disponibles:</h3>
+    <div id="dias">
+        <div class="button-container">
+            <button type="button" class="button" data-dia="Domingo">
+                <span class="button__text">Domingo</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+            <button type="button" class="button" data-dia="Lunes">
+                <span class="button__text">Lunes</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+
+            <button type="button" class="button" data-dia="Martes">
+                <span class="button__text">Martes</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+        </div>
+        <div class="button-container">
+            <button type="button" class="button" data-dia="Miércoles">
+                <span class="button__text">Miércoles</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+            <button type="button" class="button" data-dia="Jueves">
+                <span class="button__text">Jueves</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+            <button type="button" class="button" data-dia="Viernes">
+                <span class="button__text">Viernes</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor"
+                        height="24" fill="none" class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg></span>
+            </button>
+        </div>
+        <button type="button" class="button" data-dia="Sábado">
+            <span class="button__text">Sábado</span>
+            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24"
+                    fill="none" class="svg">
+                    <line y2="19" y1="5" x2="12" x1="12"></line>
+                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                </svg></span>
+        </button>
+
+    </div>
+
+    <h2>Selecciona el rango de horas para cada día:</h2>
+    <div id="horas" 5>
+        <!-- Aquí se generará dinámicamente el formulario de selección de horas -->
+    </div>
+
+    <h3>Tabla de Horarios Seleccionados:</h3>
+    <table id="tablaHorarios" class="tablaHorarios">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Día</th>
+                <th>Hora de Inicio</th>
+                <th>Hora de Fin</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generará la tabla con los datos seleccionados -->
+        </tbody>
+    </table>
+<br><br>
+    <section style="color: black;">
+        <div class="container">
+            <h3>Selecciona el día:</h3>
+
+            <select id="diaSeleccionado" name="box-1">
+                <option value="Domingo">Domingo</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+            </select>
+
+
+            <h3>Selecciona la hora:</h3>
+            <select id="horaSeleccionada" name="box-2">
+                <option value="00:00">12:00 AM</option>
+                <option value="01:00">01:00 AM</option>
+                <option value="02:00">02:00 AM</option>
+                <option value="03:00">03:00 AM</option>
+                <option value="04:00">04:00 AM</option>
+                <option value="05:00">05:00 AM</option>
+                <option value="06:00">06:00 AM</option>
+                <option value="07:00">07:00 AM</option>
+                <option value="08:00">08:00 AM</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="1:00">01:00 PM</option>
+                <option value="2:00">02:00 PM</option>
+                <option value="3:00">03:00 PM</option>
+                <option value="4:00">04:00 PM</option>
+                <option value="5:00">05:00 PM</option>
+                <option value="6:00">06:00 PM</option>
+                <option value="7:00">07:00 PM</option>
+                <option value="8:00">08:00 PM</option>
+                <option value="9:00">09:00 PM</option>
+                <option value="10:00">10:00 PM</option>
+                <option value="11:00">11:00 PM</option>
+                <!-- Agrega más opciones de horas según tus necesidades -->
+            </select>
+
+        </div>
+        <button id="compararButton" class="animated-button">Comparar</button>
+    </section> <br><br>
+        
+
+
+        <!-- Agrega esta tabla de disponibilidad en tu HTML -->
+        <h3>Tabla de Disponibilidad:</h3>
+        <table id="tablaDisponibilidad" class="tablaDisponibilidad">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se generará la tabla de disponibilidad -->
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+    <script src="/js/horarios.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+ /* Estilos CSS para resaltar los días seleccionados */
+ .seleccionado {
+     background-color: lightblue;
+ }

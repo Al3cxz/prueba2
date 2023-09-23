@@ -1,0 +1,30 @@
+/* Estilo para centrar la página */
+html{
+    background-image: image-set("/sources/clouds-1768967_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+#nombre{
+    opacity: 0.9;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+#contenido {
+    max-height: 800px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando sea necesario */
+}
